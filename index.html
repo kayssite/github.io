@@ -117,24 +117,33 @@
       position:relative;
       z-index:2;
       width:min(980px,100%);
-      padding:8.5rem 0 3rem;
+      padding:3.5rem 0 3rem;
       text-align:center;
     }
 
-    .badge{
-      display:inline-block;
-      margin-bottom:13rem;
-      padding:.55rem 1rem;
-      border-radius:999px;
-      background:rgba(255,248,236,.58);
-      border:1px solid rgba(255,255,255,.65);
-      backdrop-filter:blur(8px);
-      color:#8d7127;
-      font-size:.8rem;
-      font-weight:700;
-      letter-spacing:.18em;
+    .logo{
+      font-family:'Orbitron',sans-serif;
+      font-size:clamp(3.2rem,10vw,7.4rem);
+      line-height:.92;
       text-transform:uppercase;
-      box-shadow:0 8px 18px rgba(0,0,0,.06);
+      letter-spacing:.04em;
+      margin:0 auto 15rem;
+      filter:drop-shadow(0 6px 20px rgba(0,0,0,.22));
+      user-select:none;
+    }
+
+    .logo .kay{
+      background:linear-gradient(180deg, #ebffff 0%, #b4f4ff 26%, var(--cyan) 62%, #279dc6 100%);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    .logo .site{
+      background:linear-gradient(180deg, #f2e8ff 0%, #ceb0ff 32%, var(--violet) 68%, #7147dd 100%);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
     }
 
     .panel{
@@ -326,13 +335,13 @@
     }
 
     @media (max-width: 860px){
-      .badge{margin-bottom:10rem}
+      .logo{margin-bottom:10rem}
       .cards,.section-inner{grid-template-columns:1fr}
     }
 
     @media (max-width: 520px){
-      .content{padding-top:6.5rem}
-      .badge{margin-bottom:7.5rem;font-size:.72rem}
+      .content{padding-top:2.5rem}
+      .logo{margin-bottom:7rem}
       .panel,.glass,.card{border-radius:20px}
     }
   </style>
@@ -344,7 +353,7 @@
     <div class="floating" aria-hidden="true" id="floating"></div>
 
     <div class="content">
-      <div class="badge">Retro trifft Natur</div>
+      <div class="logo"><span class="kay">KAY</span><span class="site">SSITE</span></div>
 
       <div class="panel">
         <h1>Ein neuer Morgen beginnt</h1>
